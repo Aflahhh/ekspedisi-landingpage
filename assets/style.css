@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Onest", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.halaman {
+  padding: 0px 100px;
+  overflow: hidden;
+}
+
+/* navbar section */
+.navbar {
+  background: transparent;
+  transition: background-image 0.3s, backdrop-filter 0.3s;
+}
+.navbar a:hover {
+  font-weight: bold;
+}
+
+.navbar .container-fluid {
+  /* display: flex; */
+  padding: 0px 145px;
+}
+
+.navbar-toggler {
+  float: right;
+}
+
+.navbar-brand {
+  float: left;
+}
+
+.navbar .btn,
+.navbar .btn:hover {
+  color: #fff;
+  background-color: #7969e5;
+  border-radius: 100px;
+  padding: 4px 30px;
+}
+
+/* Efek blur saat di-scroll */
+.blur {
+  backdrop-filter: blur(5px);
+}
+
+/* end navbar section */
+
+/* hero section */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: blink 0.75s step-end infinite;
+}
+
+.hero {
+  padding: 20px 0;
+  color: black;
+}
+
+.hero p {
+  text-align: justify;
+}
+
+.btn-pesan {
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.4em 1.4em;
+  font-size: 18px;
+  background: #7969e5;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  color: white;
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.btn-pesan span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 2px solid #7969e5;
+}
+
+.btn-pesan span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 1s;
+}
+
+.btn-pesan:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: #f6f5fd;
+  color: #7969e5;
+}
+
+.btn-pesan:hover {
+  border: 2px solid #7969e5;
+  color: #7969e5;
+}
+
+.btn-pesan:active span::before {
+  background: #2751cd;
+}
+/* end hero section */
+
+/* layanan section */
+.card {
+  width: 250px;
+  height: 254px;
+  position: relative;
+  overflow: visible;
+}
+.card:hover {
+  box-shadow: 0 5px 13px rgba(135, 135, 253, 0.644), 0 1px 2px rgba(150, 118, 255, 0.754);
+}
+
+.img-card img {
+  height: 40%;
+  width: 100%;
+  border-bottom: 1px solid black;
+  transition: 0.3s ease;
+  padding: 0.8em;
+}
+
+.card-info {
+  padding-top: 10%;
+  padding: 0.8em;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+.card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*Text*/
+.text-title {
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.text-body {
+  font-size: 0.9em;
+  padding-bottom: 10px;
+}
+
+/*Hover*/
+.img-card:hover {
+  transform: translateY(-2%);
+}
+/* end hero setion */
+
+/* layanan secton */
+#kartu {
+  margin-top: 400px;
+  right: 52%;
+}
+#kartu-1 {
+  left: 60%;
+  top: 26%;
+}
+#kartu-2 {
+  left: 57%;
+}
+#kartu-3 {
+  right: 55%;
+  top: 26%;
+}
+#kartu,
+#kartu-1,
+#kartu-2,
+#kartu-3 {
+  background-color: #fff;
+  border-radius: 0%;
+}
+/* end layanan section */
+
+/* mitra section */
+#judul-mitra {
+  font-size: 25px;
+}
+.lead {
+  text-align: justify;
+}
+.glassy-background {
+  background: transparent;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 10px 10px rgb(228, 226, 228);
+}
+
+/* end mitra section */
+
+/* customer section */
+.row-customer {
+  height: 150px;
+  justify-content: center;
+  color: #fff;
+  padding: 40px 100px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  background: url("/assets/image/bg-card.jpg") no-repeat center center;
+  background-size: cover;
+}
+.isi-card-cust {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jumlah-customer {
+  font-size: 30px;
+  text-align: center;
+}
+.row-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* customer section */
+
+/* footer section */
+footer {
+  margin-top: 5px;
+  background: #fff;
+  color: #000;
+}
+footer a {
+  color: #373074;
+}
+/* end footer section */
+
+/* detail ongkos angkut */
+
+/* end detail ongkos angkut */
+
+/* ponsel */
+@media only screen and (max-width: 600px) {
+  .halaman {
+    padding: 0 0px;
+  }
+  .navbar .container-fluid {
+    padding: 0 10px;
+  }
+  .row {
+    margin-top: 0px;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+
+  #kartu {
+    margin-top: 0px;
+    right: 0%;
+  }
+  #kartu-1 {
+    left: 0%;
+    top: 0%;
+  }
+  #kartu-2 {
+    left: 0%;
+  }
+  #kartu-3 {
+    right: 0%;
+    top: 0%;
+  }
+
+  .img-cust {
+    width: 30%;
+  }
+
+  .row-customer {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+  .glassy-background {
+    width: 50%;
+  }
+  footer,
+  footer a {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+/* tablet */
+@media only screen and (min-width: 601px) and (max-width: 1232px) {
+  .card {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  #kartu {
+    margin-top: 0px;
+    right: 0%;
+  }
+  #kartu-1 {
+    left: 0%;
+    top: 0%;
+  }
+  #kartu-2 {
+    left: 0%;
+  }
+  #kartu-3 {
+    right: 0%;
+    top: 0%;
+  }
+  footer,
+  footer a {
+    font-size: 17px;
+    text-align: center;
+  }
+}
+
+/* desktop*/
+@media only screen and (min-width: 1233px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
